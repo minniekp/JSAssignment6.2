@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Manipulation</title>
+</head>
+
+<body>
+    <p>The push method appends a new element to an array.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<p>Click the button to remove the inserted elements from the array.</p>
+
+<button onclick="myFunction2()">Try it</button>
+
+<p id="demo1"></p>
+
+<p>Click the button to remove the elements from 1st index to 4th index.</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p id="demo2"></p>
+
+<script>
+var arr = [3,4,5,6,76,7,8];
+Number(document.getElementById("demo").innerHTML = arr);
+
+//Push elements onto array
+function myFunction() {
+    arr.push(9);
+    arr.push(10);
+    arr.push(11);
+    arr.push(100);
+    Number(document.getElementById("demo").innerHTML = arr);
+}
+
+// Pop elements from array
+function myFunction2() {
+    arr.pop();
+    arr.pop();
+    arr.pop();
+    arr.pop();
+    Number(document.getElementById("demo1").innerHTML = arr);
+}
+
+//Remove elements from index 1 to index 4
+function myFunction3() {
+	arr.splice(1,4);
+	Number(document.getElementById("demo2").innerHTML = arr)
+}
+
+//Iterate using for of loop
+function myFunction4() {
+	for (const value of arr) {
+        console.log(value);
+}
+}
+
+</script>
+
+
+</body>
+</html>
